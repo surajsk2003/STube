@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STube</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <style>
+            /* General styles for the body */
+            body {
+                font-family: Arial, sans-serif; /* Set the font family */
+                margin-top: 0; /* Remove default margin */
+                margin-bottom: 0;
+                background-color: #f9f9f9; /* Light gray background for the body */
+            }
+
+            /* Header Section Styling */
+            .header {
+                background-color: #f8f8f8; /* Light gray background */
+                padding: 10px; /* Padding inside the header */
+                display: flex; /* Flexbox for layout */
+                justify-content: space-between; /* Space between title and search bar */
+                align-items: center; /* Vertically align items */
+                border-bottom: 1px solid #ddd; /* Add bottom border */
+                height: 60px; /* Fixed height for header */
+                position: relative; /* Add this to adjust the search bar */
+                top: 0; /* Stick to the top of the viewport */
+                z-index: 1000; /* Ensure it stays above other content */
+            }
+
+            /* Title Styling */
+            h1 {
+                font-size: 24px; /* Adjust font size */
+                color: #ff0000; /* YouTube brand color */
+                margin: 0; /* Remove default margin */
+            }
+
+            /* Search Bar Styling */
+            .search-bar {
+                padding: 8px; /* Inner padding for better UX */
+                font-size: 16px; /* Font size for readability */
+                border: 1px solid #ddd; /* Border around the search bar */
+                border-radius: 4px; /* Rounded corners */
+                width: 20%; /* Responsive width */
+                position: absolute; /* Allows the search bar to float in the center */
+                left: 50%; /* Moves the search bar horizontally to the middle */
+                transform: translateX(-50%); /* Adjusts for the bar's width */
+
+            }
+
+            /* Thumbnail Styling */
+            .thumbnail {
+                width: 90%; /* Make thumbnails take up full width of their container */
+                height: 180px; /* Set a fixed height for uniformity */
+                object-fit: cover; /* Ensure the image is cropped while maintaining aspect ratio */
+                border-radius: 8px; /* Add rounded corners */
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+                margin-bottom: 0; /* Add spacing below thumbnails */
+            }
+
+            /* Video Info Styling */
+            .video-info-grid {
+                display: grid; /* Grid layout for info section */
+                grid-template-columns: 70px 1fr; /* Profile picture and text */
+                gap: 8px; /* Reduced spacing between profile picture and text */
+                align-items: center; /* Center-align profile picture and text */
+            }
+
+            /* Channel Icon Styling */
+            .profile-picture {
+                width: 40px; /* Increased width for profile picture */
+                height: 40px; /* Ensure it's a square */
+                border-radius: 50%; /* Circular shape */
+                margin-right: 0; /* Remove extra margins */
+                display: block; /* Block element for proper alignment */
+            }
+
+            /* Video Title Styling */
+            .video-title {
+                font-size: 14px; /* Font size */
+                font-weight: bold; /* Bold for emphasis */
+                color: #333; /* Darker text color for contrast */
+                margin: 0; /* Remove default margin */
+                line-height: 20px; /* Space between lines */
+            }
+
+            /* Video Author and Stats Styling */
+            .video-author,
+            .video-stats {
+                font-size: 14px; /* Adjust font size */
+                color: #666; /* Subtle gray color */
+                margin: 2px 0; /* Minimal vertical spacing */
+            }
+
+
+
+            /* Video Grid Styling */
+            .video-grid {
+                display: grid; /* Grid layout for videos */
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+                gap: 16px; /* Spacing between grid items */
+                padding: 20px; /* Padding for the grid container */
+            }
+            .youtube{
+                font-family: 'YouTube', sans-serif; /* Use YouTube font */
+                font-style: normal; /* Use YouTube font style */
+                font-weight: 500; /* Use YouTube font weight */
+                font-size: 16px; /* Adjusted font size */
+                line-height: 1.5; /* Adjusted line height */
+                color: #333; /* Darker text color for consistency */
+                margin: 0; /* Remove default margin */
+                padding: 0; /* Remove default padding */
+                text-decoration: none; /* Remove underline */
+                transition: color 0.3s ease; /* Smooth color transition */
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <div class="header">
+            <h1 class = "YouTube">STube</h1> <!-- YouTube Title -->
+            <input class="search-bar" type="text" placeholder="Search"> <!-- Search Bar -->
+        </div>
+
+        <!-- Video Section -->
+        <div class="video-grid">
+            <!-- Video Preview 1 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic1.jpeg" alt="Beautiful depiction of a chameleon"> <!-- Thumbnail -->
+                <div class="video-info-grid">
+                    <div>
+                        <img class="profile-picture" src="/channel_icon/channel-1.jpeg" alt="Channel Icon"> <!-- Channel Icon -->
+                    </div>
+                    <div>
+                        <p class="video-title">Beautiful depiction of a chameleon</p> <!-- Video Title -->
+                        <p class="video-author">mohit_mk</p> <!-- Video Author -->
+                        <p class="video-stats">123,456 views &#183; 6 months ago</p> <!-- Video Stats -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Preview 2 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic2.jpeg" alt="Stunning photography"> <!-- Thumbnail -->
+                <div class="video-info-grid">
+                    <div>
+                        <img class="profile-picture" src="/channel_icon/channel-2.jpeg" alt="Channel Icon"> <!-- Channel Icon -->
+                    </div>
+                    <div>
+                        <p class="video-title">Stunning photography</p> <!-- Video Title -->
+                        <p class="video-author">jivith_rja</p> <!-- Video Author -->
+                        <p class="video-stats">234,567 views &#183; 1 year ago</p> <!-- Video Stats -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Preview 3 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic3.jpeg" alt="Beautiful flower"> <!-- Thumbnail -->
+                <div class="video-info-grid">
+                    <div>
+                        <img class="profile-picture" src="/channel_icon/channel-3.jpeg" alt="Channel Icon"> <!-- Channel Icon -->
+                    </div>
+                    <div>
+                        <p class="video-title">Beautiful flower</p> <!-- Video Title -->
+                        <p class="video-author">prakhar_pr</p> <!-- Video Author -->
+                        <p class="video-stats">98,765 views &#183; 3 months ago</p> <!-- Video Stats -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add additional video previews following the structure above -->
+             <!-- Video Preview 4 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic4.jpeg" alt="Video 4"> <!-- Thumbnail Image -->
+                <div class="video-info-grid">
+                    <div>
+                            <img class="profile-picture" src="/channel_icon/channel-4.jpeg"> <!-- Channel Icon -->
+                    </div>
+                    <div>
+                        <p class="video-title">Sunset Views</p> <!-- Video Title -->
+                        <p class="video-author">sanjeev_sks</p> <!-- Author Name -->
+                        <p class="video-stats">321,654 views &#183; 2 weeks ago</p> <!-- Stats -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Preview 5 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic5.jpeg" alt="Video 5"> <!-- Thumbnail Image -->
+                <div class="video-info-grid">
+                        <div>
+                            <img class="profile-picture" src="/channel_icon/channel-5.jpeg"> <!-- Channel Icon -->
+                        </div>
+                        <div>
+                            <p class="video-title">Beautiful Lake</p> <!-- Video Title -->
+                            <p class="video-author">sanskar_sg</p> <!-- Author Name -->
+                            <p class="video-stats">456,789 views &#183; 4 months ago</p> <!-- Stats -->
+                        </div>
+                </div>
+            </div>
+
+            <!-- Video Preview 6 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic6.jpeg" alt="Video 6"> <!-- Thumbnail Image -->
+                <div class="video-info-grid">
+                        <div>
+                            <img class="profile-picture" src="/channel_icon/channel-6.jpeg"> <!-- Channel Icon -->
+                        </div>
+                        <div>
+                            <p class="video-title">AI and the Future</p> <!-- Video Title -->
+                            <p class="video-author">rohan_rr</p> <!-- Author Name -->
+                            <p class="video-stats">678,123 views &#183; 1 month ago</p> <!-- Stats -->
+                        </div>
+                </div>
+            </div>
+
+            <!-- Video Preview 7 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic7.jpeg" alt="Video 7"> <!-- Thumbnail Image -->
+                <div class="video-info-grid">
+                        <div>
+                            <img class="profile-picture" src="/channel_icon/channel-7.jpeg"> <!-- Channel Icon -->
+                        </div>
+                        <div>
+                            <p class="video-title">Not from this World</p> <!-- Video Title -->
+                            <p class="video-author">ajinkya_at</p> <!-- Author Name -->
+                            <p class="video-stats">89,234 views &#183; 8 months ago</p> <!-- Stats -->
+                        </div>
+                </div>
+            </div>
+
+            <!-- Video Preview 8 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic8.jpeg" alt="Video 8"> <!-- Thumbnail Image -->
+                <div class="video-info-grid">
+                        <div>
+                            <img class="profile-picture" src="/channel_icon/channel-8.jpeg"> <!-- Channel Icon -->
+                        </div>
+                        <div>
+                            <p class="video-title">Tokyo Revengers</p> <!-- Video Title -->
+                            <p class="video-author">sayed_sa</p> <!-- Author Name -->
+                            <p class="video-stats">543,210 views &#183; 6 days ago</p> <!-- Stats -->
+                        </div>
+                </div>
+            </div>
+
+            <!-- Video Preview 9 -->
+            <div class="video-preview">
+                <img class="thumbnail" src="/image/pic9.jpg" alt="Video 9"> <!-- Thumbnail Image -->
+                <div class="video-info-grid">
+                        <div>
+                            <img class="profile-picture" src="/channel_icon/channel-9.jpeg"> <!-- Channel Icon -->
+                        </div>
+                        <div>
+                            <p class="video-title">Naruto Uzumaki: Nine-Tail Fox</p> <!-- Video Title -->
+                            <p class="video-author">nitish_nk</p> <!-- Author Name -->
+                            <p class="video-stats">543,210 views &#183; 6 days ago</p> <!-- Stats -->
+                        </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
